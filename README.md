@@ -171,15 +171,15 @@ SELECT
     COUNT(*) as total_trans
 FROM retail_sales
 GROUP BY 1 
-   
+```
 8. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**:
 ```sql
-SELECT 
+SELECT
        year,
        month,
     avg_sale
 FROM 
-(    
+(
 SELECT 
     EXTRACT(YEAR FROM sale_date) as year,
     EXTRACT(MONTH FROM sale_date) as month,
@@ -191,7 +191,7 @@ GROUP BY 1, 2
 WHERE rank = 1
 ```
 
-9. **Write a SQL query to find the top 6 customers based on the highest total sales **:
+9 **Write a SQL query to find the top 6 customers based on the highest total sales .**:
 ```sql
 SELECT 
     customer_id,
